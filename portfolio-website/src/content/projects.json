@@ -1,0 +1,93 @@
+{
+  "projects": [
+    {
+      "id": "nlp-knowledge-graph",
+      "slug": "nlp-knowledge-graph",
+      "title": "NLP Knowledge Graph Extraction",
+      "description": "Extract named entities and relationships from raw text to automatically build structured knowledge graphs using state-of-the-art NLP models.",
+      "longDescription": "This project implements an automated pipeline for extracting structured knowledge from unstructured text. It uses spaCy and Hugging Face Transformers for named entity recognition and relation extraction, then stores the resulting knowledge graph in Neo4j for efficient querying and visualization. The system supports multiple text formats and can process large corpora in batch mode.",
+      "emoji": "📊",
+      "tags": ["spaCy", "Transformers", "NetworkX", "Neo4j", "Python"],
+      "githubUrl": "https://github.com/asierabreu/ai-nlp/tree/main/projects/nlp-knowledge-graph",
+      "docsUrl": "https://github.com/asierabreu/ai-nlp/blob/main/projects/nlp-knowledge-graph/README.md",
+      "status": "active",
+      "highlights": [
+        "Named Entity Recognition (NER) with spaCy",
+        "Relation extraction using Transformers",
+        "Graph storage with Neo4j",
+        "Interactive visualization with NetworkX"
+      ]
+    },
+    {
+      "id": "llm-fine-tuning-toolkit",
+      "slug": "llm-fine-tuning-toolkit",
+      "title": "LLM Fine-Tuning Toolkit",
+      "description": "A modular framework for fine-tuning large language models on custom datasets using parameter-efficient LoRA/QLoRA techniques with experiment tracking.",
+      "longDescription": "A comprehensive toolkit that simplifies the process of fine-tuning large language models. It provides configurable LoRA and QLoRA adapters, automatic mixed precision training, and built-in experiment tracking via Weights & Biases. The toolkit supports various base models from Hugging Face and includes evaluation utilities for measuring model performance.",
+      "emoji": "🔧",
+      "tags": ["PyTorch", "Transformers", "LoRA", "QLoRA", "W&B"],
+      "githubUrl": "https://github.com/asierabreu/ai-nlp/tree/main/projects/llm-fine-tuning-toolkit",
+      "docsUrl": "https://github.com/asierabreu/ai-nlp/blob/main/projects/llm-fine-tuning-toolkit/README.md",
+      "status": "active",
+      "highlights": [
+        "LoRA and QLoRA parameter-efficient fine-tuning",
+        "Automatic mixed precision (AMP) support",
+        "Weights & Biases experiment tracking",
+        "Configurable training pipelines"
+      ]
+    },
+    {
+      "id": "domain-specific-llm",
+      "slug": "domain-specific-llm",
+      "title": "Domain-Specific LLM",
+      "description": "A pre-trained LLM specialized for a specific domain through continued pre-training and instruction fine-tuning with rigorous evaluation benchmarks.",
+      "longDescription": "This project demonstrates domain adaptation of large language models through continued pre-training on domain-specific corpora and instruction fine-tuning. It includes a rigorous evaluation framework with domain-specific benchmarks to measure the quality of domain adaptation, as well as tools for comparing the specialized model against general-purpose baselines.",
+      "emoji": "🎯",
+      "tags": ["PyTorch", "Transformers", "Domain Adaptation", "Evaluation"],
+      "githubUrl": "https://github.com/asierabreu/ai-nlp/tree/main/projects/domain-specific-llm",
+      "docsUrl": "https://github.com/asierabreu/ai-nlp/blob/main/projects/domain-specific-llm/README.md",
+      "status": "wip",
+      "highlights": [
+        "Continued pre-training on domain corpora",
+        "Instruction fine-tuning for task alignment",
+        "Domain-specific evaluation benchmarks",
+        "Comparison with general-purpose models"
+      ]
+    },
+    {
+      "id": "text2kg-demo",
+      "slug": "text2kg-demo",
+      "title": "Text-to-Knowledge Graph Demo",
+      "description": "An end-to-end interactive demo combining NLP entity extraction with LLM-powered enrichment to construct knowledge graphs from arbitrary text input.",
+      "longDescription": "An interactive web application that lets users input arbitrary text and visualize the resulting knowledge graph. The backend combines spaCy for entity extraction with a fine-tuned LLM for relationship enrichment. The frontend, built with React and FastAPI, provides real-time graph visualization with zoom, pan, and node detail views.",
+      "emoji": "🚀",
+      "tags": ["FastAPI", "React", "Neo4j", "spaCy", "Transformers"],
+      "githubUrl": "https://github.com/asierabreu/ai-nlp/tree/main/projects/text2kg-demo",
+      "demoUrl": "#",
+      "status": "wip",
+      "highlights": [
+        "Real-time knowledge graph construction",
+        "Interactive graph visualization",
+        "LLM-powered relationship enrichment",
+        "REST API with FastAPI"
+      ]
+    },
+    {
+      "id": "nlp-annotation-tool",
+      "slug": "nlp-annotation-tool",
+      "title": "NLP Annotation Tool",
+      "description": "A web-based data annotation utility for labelling NER, relations, and text classifications to build high-quality training datasets.",
+      "longDescription": "A lightweight, self-hosted annotation tool designed for NLP practitioners. It supports NER labelling, relation annotation between entities, and text classification tasks. Built with Streamlit and FastAPI, it stores annotations in SQLite and exports to common formats like CoNLL, JSON, and CSV for easy integration with training pipelines.",
+      "emoji": "🏷️",
+      "tags": ["Streamlit", "FastAPI", "SQLite", "Python"],
+      "githubUrl": "https://github.com/asierabreu/ai-nlp/tree/main/projects/nlp-annotation-tool",
+      "status": "planned",
+      "highlights": [
+        "NER and relation annotation interface",
+        "Text classification labelling",
+        "Export to CoNLL, JSON, CSV formats",
+        "Self-hosted with SQLite storage"
+      ]
+    }
+  ]
+}
