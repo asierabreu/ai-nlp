@@ -152,6 +152,6 @@ MIT License — see [LICENSE](./LICENSE) for details.
 
 ## 📬 Contact
 
-- 📧 Email: contact@example.com
-- 🔗 LinkedIn: [your-linkedin](https://linkedin.com)
+- 📧 Email: asierabreu@gmail.com
+- 🔗 LinkedIn: [https://www.linkedin.com/in/asierabreu](https://linkedin.com/in/asierabreu)
 - 💻 GitHub: [@asierabreu](https://github.com/asierabreu)
