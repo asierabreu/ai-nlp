@@ -9,17 +9,15 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - NODE_ENV=development
-    volumes:
-      - ./portfolio-website:/app
-      - /app/node_modules
-    command: npm run dev
+      - NODE_ENV=production
+    restart: unless-stopped
 
   # text2kg-demo backend (FastAPI)
+  # Build context is the project root so the Dockerfile can access requirements.txt
   text2kg-backend:
     build:
-      context: ./projects/text2kg-demo/backend
-      dockerfile: Dockerfile
+      context: ./projects/text2kg-demo
+      dockerfile: backend/Dockerfile
     ports:
       - "8000:8000"
     environment:
@@ -27,20 +25,21 @@ services:
       - NEO4J_USER=neo4j
       - NEO4J_PASSWORD=password
     depends_on:
-      - neo4j
-    volumes:
-      - ./projects/text2kg-demo/backend:/app
+      neo4j:
+        condition: service_healthy
+    restart: unless-stopped
 
   # nlp-annotation-tool backend
+  # Build context is the project root so the Dockerfile can access requirements.txt
   annotation-backend:
     build:
-      context: ./projects/nlp-annotation-tool/backend
-      dockerfile: Dockerfile
+      context: ./projects/nlp-annotation-tool
+      dockerfile: backend/Dockerfile
     ports:
       - "8001:8001"
     volumes:
-      - ./projects/nlp-annotation-tool:/app
       - annotation_data:/app/data
+    restart: unless-stopped
 
   # Neo4j graph database
   neo4j:
@@ -54,6 +53,13 @@ services:
     volumes:
       - neo4j_data:/data
       - neo4j_logs:/logs
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:7474"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
 
 volumes:
   neo4j_data:

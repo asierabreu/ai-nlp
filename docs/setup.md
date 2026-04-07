@@ -68,6 +68,21 @@ Services:
 | Annotation Tool | http://localhost:8001/docs |
 | Neo4j Browser | http://localhost:7474 |
 
+To run only a specific service (and its dependencies):
+
+```bash
+docker-compose up --build portfolio-website
+docker-compose up --build text2kg-backend neo4j
+```
+
+To stop all services:
+
+```bash
+docker-compose down
+# Also remove persistent volumes (caution: deletes Neo4j data)
+docker-compose down -v
+```
+
 ---
 
 ## 5. Environment Variables
