@@ -1,0 +1,61 @@
+version: "3.9"
+
+services:
+  # Portfolio website (Next.js)
+  portfolio-website:
+    build:
+      context: ./portfolio-website
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./portfolio-website:/app
+      - /app/node_modules
+    command: npm run dev
+
+  # text2kg-demo backend (FastAPI)
+  text2kg-backend:
+    build:
+      context: ./projects/text2kg-demo/backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - NEO4J_URI=bolt://neo4j:7687
+      - NEO4J_USER=neo4j
+      - NEO4J_PASSWORD=password
+    depends_on:
+      - neo4j
+    volumes:
+      - ./projects/text2kg-demo/backend:/app
+
+  # nlp-annotation-tool backend
+  annotation-backend:
+    build:
+      context: ./projects/nlp-annotation-tool/backend
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./projects/nlp-annotation-tool:/app
+      - annotation_data:/app/data
+
+  # Neo4j graph database
+  neo4j:
+    image: neo4j:5
+    ports:
+      - "7474:7474"   # HTTP browser
+      - "7687:7687"   # Bolt protocol
+    environment:
+      - NEO4J_AUTH=neo4j/password
+      - NEO4J_PLUGINS=["apoc"]
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+
+volumes:
+  neo4j_data:
+  neo4j_logs:
+  annotation_data:
