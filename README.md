@@ -1,6 +1,6 @@
-# 🤖 AI/NLP Portfolio
+# 🤖 AI/NLP Projects
 
-A comprehensive monorepo showcasing cutting-edge work in Natural Language Processing,
+A repository showcasing some personal work in Natural Language Processing,
 Knowledge Graphs, and Large Language Model fine-tuning.
 
 [![Website Deploy](https://github.com/asierabreu/ai-nlp/actions/workflows/website-deploy.yml/badge.svg)](https://github.com/asierabreu/ai-nlp/actions/workflows/website-deploy.yml)
@@ -14,7 +14,7 @@ Knowledge Graphs, and Large Language Model fine-tuning.
 
 ```
 ai-nlp/
-├── portfolio-website/       # Modern Next.js portfolio homepage
+├── website/       # Modern Next.js project homepage
 ├── projects/
 │   ├── nlp-knowledge-graph/     # Knowledge graph extraction from text
 │   ├── llm-fine-tuning-toolkit/ # LLM fine-tuning framework
@@ -100,8 +100,8 @@ cd ai-nlp
 python -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
 
-# Portfolio website
-cd portfolio-website
+# Website
+cd website
 npm install
 npm run dev
 # Visit http://localhost:3000

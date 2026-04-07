@@ -1,0 +1,53 @@
+{
+  "projects": [
+    {
+      "id": "nlp-knowledge-graph",
+      "title": "NLP Knowledge Graph Extraction",
+      "description": "Extract named entities and relationships from raw text to automatically build structured knowledge graphs using state-of-the-art NLP models.",
+      "emoji": "📊",
+      "tags": ["spaCy", "Transformers", "NetworkX", "Neo4j", "Python"],
+      "githubUrl": "https://github.com/asierabreu/ai-nlp/tree/main/projects/nlp-knowledge-graph",
+      "docsUrl": "https://github.com/asierabreu/ai-nlp/blob/main/projects/nlp-knowledge-graph/README.md",
+      "status": "active"
+    },
+    {
+      "id": "llm-fine-tuning-toolkit",
+      "title": "LLM Fine-Tuning Toolkit",
+      "description": "A modular framework for fine-tuning large language models on custom datasets using parameter-efficient LoRA/QLoRA techniques with experiment tracking.",
+      "emoji": "🔧",
+      "tags": ["PyTorch", "Transformers", "LoRA", "QLoRA", "W&B"],
+      "githubUrl": "https://github.com/asierabreu/ai-nlp/tree/main/projects/llm-fine-tuning-toolkit",
+      "docsUrl": "https://github.com/asierabreu/ai-nlp/blob/main/projects/llm-fine-tuning-toolkit/README.md",
+      "status": "active"
+    },
+    {
+      "id": "domain-specific-llm",
+      "title": "Domain-Specific LLM",
+      "description": "A pre-trained LLM specialized for a specific domain through continued pre-training and instruction fine-tuning with rigorous evaluation benchmarks.",
+      "emoji": "🎯",
+      "tags": ["PyTorch", "Transformers", "Domain Adaptation", "Evaluation"],
+      "githubUrl": "https://github.com/asierabreu/ai-nlp/tree/main/projects/domain-specific-llm",
+      "docsUrl": "https://github.com/asierabreu/ai-nlp/blob/main/projects/domain-specific-llm/README.md",
+      "status": "wip"
+    },
+    {
+      "id": "text2kg-demo",
+      "title": "Text-to-Knowledge Graph Demo",
+      "description": "An end-to-end interactive demo combining NLP entity extraction with LLM-powered enrichment to construct knowledge graphs from arbitrary text input.",
+      "emoji": "🚀",
+      "tags": ["FastAPI", "React", "Neo4j", "spaCy", "Transformers"],
+      "githubUrl": "https://github.com/asierabreu/ai-nlp/tree/main/projects/text2kg-demo",
+      "demoUrl": "#",
+      "status": "wip"
+    },
+    {
+      "id": "nlp-annotation-tool",
+      "title": "NLP Annotation Tool",
+      "description": "A web-based data annotation utility for labelling NER, relations, and text classifications to build high-quality training datasets.",
+      "emoji": "🏷️",
+      "tags": ["Streamlit", "FastAPI", "SQLite", "Python"],
+      "githubUrl": "https://github.com/asierabreu/ai-nlp/tree/main/projects/nlp-annotation-tool",
+      "status": "planned"
+    }
+  ]
+}
