@@ -67,7 +67,7 @@ export default function AboutPage() {
       {/* Skills */}
       <section className="mb-14">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-          Skills &amp; Technologies
+          Skills & Technologies
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {skills.map((skill) => (
