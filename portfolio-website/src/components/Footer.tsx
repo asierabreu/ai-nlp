@@ -1,3 +1,6 @@
+import Link from "next/link";
+import GitHubIcon from "./GitHubIcon";
+
 export default function Footer() {
   return (
     <footer className="border-t border-gray-200 dark:border-gray-800 mt-24">
@@ -20,26 +23,22 @@ export default function Footer() {
               Projects
             </h4>
             <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-              <li>
-                <a href="#nlp-kg" className="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
-                  NLP Knowledge Graph
-                </a>
-              </li>
-              <li>
-                <a href="#llm-toolkit" className="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
-                  LLM Fine-Tuning Toolkit
-                </a>
-              </li>
-              <li>
-                <a href="#domain-llm" className="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
-                  Domain-Specific LLM
-                </a>
-              </li>
-              <li>
-                <a href="#text2kg" className="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
-                  Text-to-KG Demo
-                </a>
-              </li>
+              {[
+                { href: "/projects/nlp-knowledge-graph", label: "NLP Knowledge Graph" },
+                { href: "/projects/llm-fine-tuning-toolkit", label: "LLM Fine-Tuning Toolkit" },
+                { href: "/projects/domain-specific-llm", label: "Domain-Specific LLM" },
+                { href: "/projects/text2kg-demo", label: "Text-to-KG Demo" },
+                { href: "/projects/nlp-annotation-tool", label: "NLP Annotation Tool" },
+              ].map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="hover:text-brand-600 dark:hover:text-brand-400 transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -54,20 +53,27 @@ export default function Footer() {
                   href="https://github.com/asierabreu/ai-nlp"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-brand-600 dark:hover:text-brand-400 transition-colors"
+                  className="inline-flex items-center gap-1.5 hover:text-brand-600 dark:hover:text-brand-400 transition-colors"
                 >
+                  <GitHubIcon className="w-3.5 h-3.5" />
                   GitHub Repository
                 </a>
               </li>
               <li>
-                <a href="/about" className="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
-                  About
-                </a>
+                <Link
+                  href="/projects"
+                  className="hover:text-brand-600 dark:hover:text-brand-400 transition-colors"
+                >
+                  All Projects
+                </Link>
               </li>
               <li>
-                <a href="/contact" className="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+                <Link
+                  href="/contact"
+                  className="hover:text-brand-600 dark:hover:text-brand-400 transition-colors"
+                >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
