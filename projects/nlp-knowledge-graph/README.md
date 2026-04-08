@@ -39,6 +39,9 @@ nlp-knowledge-graph/
 │   └── processed/          # Processed graph exports
 ├── tests/
 │   └── test_graph_builder.py
+├── scripts/
+│   ├── build_kg.py         # Build graph JSON from raw text
+│   └── visualize_kg.py     # Render PNG/HTML graph visualizations
 ├── requirements.txt
 └── README.md
 ```
@@ -56,24 +59,49 @@ pip install -r requirements.txt
 python -m spacy download en_core_web_sm
 ```
 
-## Quick Start
+## Example Usage
+From project folder type:
+```
+python scripts/build_kg.py --input data/raw/sample.txt --output data/processed/graph.json
+```
 
-```python
-from src.ner import extract_entities
-from src.relation_extractor import extract_relations
-from src.graph_builder import build_graph
+## Visualize The Generated Knowledge Graph
 
-text = """
-Apple was founded by Steve Jobs, Steve Wozniak, and Ronald Wayne in 1976.
-The company is headquartered in Cupertino, California.
-"""
+After generating `data/processed/graph.json`, use the visualization script.
 
-entities = extract_entities(text)
-relations = extract_relations(text, entities)
-graph = build_graph(entities, relations)
+### 1. Generate Both PNG And HTML
 
-print(f"Nodes: {graph.number_of_nodes()}")
-print(f"Edges: {graph.number_of_edges()}")
+```bash
+python scripts/visualize_kg.py \
+  --input data/processed/graph.json \
+  --format both
+```
+
+This creates:
+
+- `data/processed/graph.png`
+- `data/processed/graph.html`
+
+### 2. Generate Only One Format
+
+```bash
+python scripts/visualize_kg.py --input data/processed/graph.json --format png
+python scripts/visualize_kg.py --input data/processed/graph.json --format html
+```
+
+### 3. Custom Output Path
+
+```bash
+python scripts/visualize_kg.py \
+  --input data/processed/graph.json \
+  --format html \
+  --output data/processed/sample-graph.html
+```
+
+Open the interactive output in your browser:
+
+```bash
+xdg-open data/processed/graph.html
 ```
 
 ## Running Tests

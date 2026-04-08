@@ -1,0 +1,99 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "ORG",
+      "type": "entity",
+      "id": "Apple"
+    },
+    {
+      "label": "PERSON",
+      "type": "entity",
+      "id": "Steve Jobs"
+    },
+    {
+      "label": "PERSON",
+      "type": "entity",
+      "id": "Steve Wozniak"
+    },
+    {
+      "label": "PERSON",
+      "type": "entity",
+      "id": "Ronald Wayne"
+    },
+    {
+      "label": "DATE",
+      "type": "entity",
+      "id": "1976"
+    },
+    {
+      "label": "GPE",
+      "type": "entity",
+      "id": "Cupertino"
+    },
+    {
+      "label": "GPE",
+      "type": "entity",
+      "id": "California"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "co-occurs-with",
+      "source": "Apple",
+      "target": "Steve Jobs"
+    },
+    {
+      "relation": "co-occurs-with",
+      "source": "Apple",
+      "target": "Steve Wozniak"
+    },
+    {
+      "relation": "co-occurs-with",
+      "source": "Apple",
+      "target": "Ronald Wayne"
+    },
+    {
+      "relation": "co-occurs-with",
+      "source": "Apple",
+      "target": "1976"
+    },
+    {
+      "relation": "co-occurs-with",
+      "source": "Steve Jobs",
+      "target": "Steve Wozniak"
+    },
+    {
+      "relation": "co-occurs-with",
+      "source": "Steve Jobs",
+      "target": "Ronald Wayne"
+    },
+    {
+      "relation": "co-occurs-with",
+      "source": "Steve Jobs",
+      "target": "1976"
+    },
+    {
+      "relation": "co-occurs-with",
+      "source": "Steve Wozniak",
+      "target": "Ronald Wayne"
+    },
+    {
+      "relation": "co-occurs-with",
+      "source": "Steve Wozniak",
+      "target": "1976"
+    },
+    {
+      "relation": "co-occurs-with",
+      "source": "Ronald Wayne",
+      "target": "1976"
+    },
+    {
+      "relation": "co-occurs-with",
+      "source": "Cupertino",
+      "target": "California"
+    }
+  ]
+}
