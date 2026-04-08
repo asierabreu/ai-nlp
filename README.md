@@ -3,7 +3,7 @@
 A repository showcasing some personal work in Natural Language Processing,
 Knowledge Graphs, and Large Language Model fine-tuning.
 
-[![Website Deploy](https://github.com/asierabreu/ai-nlp/actions/workflows/website-deploy.yml/badge.svg)](https://github.com/asierabreu/ai-nlp/actions/workflows/website-deploy.yml)
+[![Deploy Docs](https://github.com/asierabreu/ai-nlp/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/asierabreu/ai-nlp/actions/workflows/deploy-docs.yml)
 [![Tests](https://github.com/asierabreu/ai-nlp/actions/workflows/tests.yml/badge.svg)](https://github.com/asierabreu/ai-nlp/actions/workflows/tests.yml)
 [![Lint](https://github.com/asierabreu/ai-nlp/actions/workflows/lint.yml/badge.svg)](https://github.com/asierabreu/ai-nlp/actions/workflows/lint.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
@@ -14,7 +14,11 @@ Knowledge Graphs, and Large Language Model fine-tuning.
 
 ```
 ai-nlp/
-├── website/       # Modern Next.js project homepage
+├── docs/                    # MkDocs documentation site
+│   ├── mkdocs.yml
+│   ├── requirements.txt
+│   ├── Dockerfile
+│   └── docs/                # Markdown source files
 ├── projects/
 │   ├── nlp-knowledge-graph/     # Knowledge graph extraction from text
 │   ├── llm-fine-tuning-toolkit/ # LLM fine-tuning framework
@@ -22,7 +26,6 @@ ai-nlp/
 │   ├── text2kg-demo/            # Integrated text-to-KG demo
 │   └── nlp-annotation-tool/     # Data annotation utility
 ├── shared/                  # Shared utilities and libraries
-├── docs/                    # Portfolio documentation
 ├── .github/workflows/       # CI/CD automation
 ├── docker-compose.yml       # Local development setup
 └── README.md
@@ -67,7 +70,7 @@ continued pre-training and instruction fine-tuning with rigorous evaluation.
 An end-to-end interactive demo combining NLP entity extraction with LLM-powered
 enrichment to construct knowledge graphs from arbitrary text input.
 
-- **Tech**: FastAPI, React, Neo4j, spaCy, Transformers
+- **Tech**: FastAPI, Neo4j, spaCy, Transformers
 - **Highlights**: REST API, interactive visualization, real-time processing
 
 ---
@@ -87,7 +90,6 @@ classifications to build high-quality training datasets.
 ### Prerequisites
 
 - Python 3.10+
-- Node.js 18+
 - Docker & Docker Compose (optional)
 
 ### Clone & Setup
@@ -96,15 +98,11 @@ classifications to build high-quality training datasets.
 git clone https://github.com/asierabreu/ai-nlp.git
 cd ai-nlp
 
-# Python virtual environment
-python -m venv venv
-source venv/bin/activate   # Windows: venv\Scripts\activate
-
-# Website
-cd website
-npm install
-npm run dev
-# Visit http://localhost:3000
+# Run the documentation site locally
+cd docs
+pip install -r requirements.txt
+mkdocs serve
+# Visit http://localhost:8000
 ```
 
 ### Docker (All Services)
@@ -119,27 +117,26 @@ docker-compose up --build
 
 | Layer | Technologies |
 |-------|-------------|
-| **Frontend** | Next.js 14, React 18, TypeScript, Tailwind CSS |
+| **Documentation** | MkDocs, Material for MkDocs |
 | **Backend** | Python 3.10+, FastAPI |
 | **NLP** | spaCy, Hugging Face Transformers, NLTK |
 | **LLM** | PyTorch, LoRA/QLoRA (PEFT), Weights & Biases |
-| **Graph** | NetworkX, Neo4j, D3.js |
-| **Deployment** | Docker, GitHub Actions, Vercel |
+| **Graph** | NetworkX, Neo4j |
+| **Deployment** | Docker, GitHub Actions, GitHub Pages |
 
 ---
 
 ## 📚 Documentation
 
-- [Setup Guide](./docs/setup.md)
-- [Architecture Overview](./docs/architecture.md)
-- [Contributing Guidelines](./docs/contributing.md)
-- [FAQ](./docs/faq.md)
+- [Setup Guide](./docs/docs/setup.md)
+- [Architecture Overview](./docs/docs/architecture.md)
+- [Contributing Guidelines](./docs/docs/contributing.md)
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please read the [contributing guidelines](./docs/contributing.md)
+Contributions are welcome! Please read the [contributing guidelines](./docs/docs/contributing.md)
 and open an issue or pull request.
 
 ---
