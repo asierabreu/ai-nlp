@@ -1,6 +1,6 @@
 # Projects Overview
 
-This repository contains five interconnected AI/NLP projects, all written in Python
+This repository contains six interconnected AI/NLP projects, all written in Python
 and sharing a common `shared/` utilities library.
 
 ---
@@ -38,6 +38,19 @@ continued pre-training and instruction fine-tuning with rigorous evaluation.
 - **Highlights**: Domain adaptation, benchmark evaluation, model cards
 - **Status**: Work in Progress
 - **[View Project →](projects/domain-specific-llm.md)**
+
+---
+
+## 🧪 Scientific LLM Finetunning
+
+A production-ready LLM engineering stack for domain-specific assistants with
+data pipelines, configurable GPT-style model setups, scalable training, serving,
+and observability for real-world deployment.
+
+- **Tech**: PyTorch, Hugging Face, FastAPI, vLLM, DeepSpeed/FSDP, Prometheus, Grafana
+- **Highlights**: Dataset versioning, SFT + pretraining workflows, latency benchmarking
+- **Status**: Active
+- **[View Project →](projects/scientific-llm-finetunning.md)**
 
 ---
 

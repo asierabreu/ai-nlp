@@ -39,6 +39,7 @@ nav:
       - NLP Knowledge Graph: projects/nlp-knowledge-graph.md
       - LLM Fine-Tuning Toolkit: projects/llm-fine-tuning-toolkit.md
       - Domain-Specific LLM: projects/domain-specific-llm.md
+      - Scientific LLM Finetunning: projects/scientific-llm-finetunning.md
       - Text-to-KG Demo: projects/text2kg-demo.md
       - NLP Annotation Tool: projects/nlp-annotation-tool.md
   - Setup: setup.md

@@ -12,6 +12,7 @@ Natural Language Processing, Knowledge Graphs, and Large Language Model fine-tun
 | [📊 NLP Knowledge Graph](projects/nlp-knowledge-graph.md) | Extract entities & relationships from text | Active |
 | [🔧 LLM Fine-Tuning Toolkit](projects/llm-fine-tuning-toolkit.md) | Modular LoRA/QLoRA fine-tuning framework | Active |
 | [🎯 Domain-Specific LLM](projects/domain-specific-llm.md) | Domain-adapted LLM with evaluation | WIP |
+| [🧪 Scientific LLM Finetunning](projects/scientific-llm-finetunning.md) | Production-ready domain assistant stack | Active |
 | [🚀 Text-to-KG Demo](projects/text2kg-demo.md) | End-to-end interactive KG demo | WIP |
 | [🏷️ NLP Annotation Tool](projects/nlp-annotation-tool.md) | Web-based NER & relation annotation | Planned |
 
