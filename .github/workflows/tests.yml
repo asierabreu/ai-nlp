@@ -22,6 +22,7 @@ jobs:
           - projects/domain-specific-llm
           - projects/text2kg-demo
           - projects/nlp-annotation-tool
+          - projects/scientific-llm-finetunning
           - shared
 
     steps:

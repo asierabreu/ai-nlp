@@ -1,0 +1,3 @@
+{"id": "q1", "text": "CRISPR-Cas9 is a genome editing technology derived from bacterial immune systems.", "question": "What is CRISPR-Cas9?", "reference": "A genome editing technology from bacterial immunity."}
+{"id": "q2", "text": "mRNA vaccines deliver messenger RNA that instructs cells to produce a viral antigen.", "question": "How do mRNA vaccines work?", "reference": "They provide mRNA instructions to produce an antigen."}
+{"id": "q3", "text": "Protein folding describes how a polypeptide chain adopts a stable three-dimensional structure.", "question": "What is protein folding?", "reference": "The process by which a polypeptide forms a stable 3D structure."}

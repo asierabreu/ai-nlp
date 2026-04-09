@@ -1,0 +1,50 @@
+name: Scientific LLM Finetunning CI
+
+on:
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - projects/scientific-llm-finetunning/**
+      - .github/workflows/scientific-llm-finetunning-ci.yml
+  pull_request:
+    branches:
+      - master
+      - main
+    paths:
+      - projects/scientific-llm-finetunning/**
+      - .github/workflows/scientific-llm-finetunning-ci.yml
+
+jobs:
+  test-and-smoke:
+    name: Test and Smoke (${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r projects/scientific-llm-finetunning/requirements.txt
+
+      - name: Run unit tests
+        run: |
+          pytest -q projects/scientific-llm-finetunning/tests
+
+      - name: Run end-to-end smoke
+        working-directory: projects/scientific-llm-finetunning
+        run: |
+          python scripts/end_to_end_smoke.py \
+            --input data/raw/sample_scientific_qa.jsonl \
+            --output data/processed/smoke_ci

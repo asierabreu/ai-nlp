@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scientific-llm-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: scientific-llm-api
+  template:
+    metadata:
+      labels:
+        app: scientific-llm-api
+    spec:
+      containers:
+        - name: api
+          image: scientific-llm-finetunning:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MODEL_NAME
+              value: "gpt2"
+            - name: INFERENCE_BACKEND
+              value: "hf"
+          resources:
+            requests:
+              cpu: "1"
+              memory: "2Gi"
+            limits:
+              cpu: "2"
+              memory: "8Gi"
+              nvidia.com/gpu: "1"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: scientific-llm-api
+spec:
+  selector:
+    app: scientific-llm-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080

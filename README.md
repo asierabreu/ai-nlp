@@ -6,6 +6,7 @@ Knowledge Graphs, and Large Language Model fine-tuning.
 [![Deploy Docs](https://github.com/asierabreu/ai-nlp/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/asierabreu/ai-nlp/actions/workflows/deploy-docs.yml)
 [![Tests](https://github.com/asierabreu/ai-nlp/actions/workflows/tests.yml/badge.svg)](https://github.com/asierabreu/ai-nlp/actions/workflows/tests.yml)
 [![Lint](https://github.com/asierabreu/ai-nlp/actions/workflows/lint.yml/badge.svg)](https://github.com/asierabreu/ai-nlp/actions/workflows/lint.yml)
+[![Scientific LLM CI](https://github.com/asierabreu/ai-nlp/actions/workflows/scientific-llm-finetunning-ci.yml/badge.svg)](https://github.com/asierabreu/ai-nlp/actions/workflows/scientific-llm-finetunning-ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 ---
@@ -24,7 +25,8 @@ ai-nlp/
 │   ├── llm-fine-tuning-toolkit/ # LLM fine-tuning framework
 │   ├── domain-specific-llm/     # Domain-specialized LLM
 │   ├── text2kg-demo/            # Integrated text-to-KG demo
-│   └── nlp-annotation-tool/     # Data annotation utility
+│   ├── nlp-annotation-tool/     # Data annotation utility
+│   └── scientific-llm-finetunning/ # Production-grade domain assistant stack
 ├── shared/                  # Shared utilities and libraries
 ├── .github/workflows/       # CI/CD automation
 ├── docker-compose.yml       # Local development setup
@@ -82,6 +84,16 @@ classifications to build high-quality training datasets.
 
 - **Tech**: Streamlit / FastAPI, SQLite/PostgreSQL
 - **Highlights**: Annotation UI, multi-label support, dataset export
+
+---
+
+### 6. 🧪 [Scientific LLM Finetunning](./projects/scientific-llm-finetunning/)
+
+A production-oriented repository for domain-specific assistant engineering with
+data pipelines, scalable training, FastAPI serving, and observability tooling.
+
+- **Tech**: PyTorch, Hugging Face, FastAPI, vLLM, DeepSpeed/FSDP, Prometheus, Grafana
+- **Highlights**: Dataset versioning, configurable GPT-style configs, SFT/pretraining, latency benchmarks, CI smoke pipeline
 
 ---
 
