@@ -1,4 +1,4 @@
-# 🤖 AI/NLP Projects
+# AI/NLP Projects
 
 A repository showcasing some personal work in Natural Language Processing,
 Knowledge Graphs, and Large Language Model fine-tuning.
