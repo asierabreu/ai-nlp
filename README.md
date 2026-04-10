@@ -26,7 +26,7 @@ ai-nlp/
 │   ├── domain-specific-llm/     # Domain-specialized LLM
 │   ├── text2kg-demo/            # Integrated text-to-KG demo
 │   ├── nlp-annotation-tool/     # Data annotation utility
-│   └── scientific-llm-finetunning/ # Production-grade domain assistant stack
+│   └── astro-llm-fine-tuning/ # Astro LLM fine-tuning
 ├── shared/                  # Shared utilities and libraries
 ├── .github/workflows/       # CI/CD automation
 ├── docker-compose.yml       # Local development setup
@@ -87,7 +87,7 @@ classifications to build high-quality training datasets.
 
 ---
 
-### 6. 🧪 [Scientific LLM Finetunning](./projects/scientific-llm-finetunning/)
+### 6. 🧪 [Astro LLM Fine-Tuning](./projects/astro-llm-fine-tuning/)
 
 A production-oriented repository for domain-specific assistant engineering with
 data pipelines, scalable training, FastAPI serving, and observability tooling.
