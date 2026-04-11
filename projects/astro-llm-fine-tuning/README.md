@@ -1,8 +1,8 @@
-# Scientific LLM Finetunning
+# Astro LLM Fine Tuning
 
-[![Scientific LLM CI](https://github.com/asierabreu/ai-nlp/actions/workflows/scientific-llm-finetunning-ci.yml/badge.svg)](https://github.com/asierabreu/ai-nlp/actions/workflows/scientific-llm-finetunning-ci.yml)
+[![Astro LLM CI](https://github.com/asierabreu/ai-nlp/actions/workflows/astro-llm-fine-tuning-ci.yml/badge.svg)](https://github.com/asierabreu/ai-nlp/actions/workflows/astro-llm-fine-tuning-ci.yml)
 
-Production-ready LLM engineering repository for building a domain-specific assistant (for example, scientific QA).
+Production-ready LLM for building a domain-specific assistant for specialist QA.
 
 ## Features
 
@@ -23,7 +23,7 @@ Production-ready LLM engineering repository for building a domain-specific assis
 ## Project Structure
 
 ```text
-scientific-llm-finetunning/
+astro-llm-fine-tuning/
 ├── configs/
 ├── data/
 │   ├── raw/
@@ -49,7 +49,7 @@ scientific-llm-finetunning/
 ## Quick Start
 
 ```bash
-cd projects/scientific-llm-finetunning
+cd projects/astro-llm-fine-tuning
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
