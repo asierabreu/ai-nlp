@@ -32,10 +32,14 @@ def run_data_pipeline(
 
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
-    (output / "dataset.jsonl").write_text(
+
+    manifest = write_version_manifest(tokenized, output, source=input_path_or_url)
+    digest_short = manifest["digest_short"]
+    
+    dataset_path = output / f"dataset_{digest_short}.jsonl"
+    dataset_path.write_text(
         "\n".join(json.dumps(row, ensure_ascii=True) for row in tokenized),
         encoding="utf-8",
     )
 
-    manifest = write_version_manifest(tokenized, output, source=input_path_or_url)
-    return {"records": len(tokenized), "manifest": manifest}
+    return {"records": len(tokenized), "manifest": manifest, "dataset_path": str(dataset_path)}

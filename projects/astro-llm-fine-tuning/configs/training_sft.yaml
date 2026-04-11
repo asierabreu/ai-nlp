@@ -22,4 +22,4 @@ training:
 
 tracking:
   use_wandb: true
-  project: "scientific-llm-finetunning"
+  project: "astro-llm-fine-tuning"
