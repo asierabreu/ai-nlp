@@ -1,3 +1,11 @@
+"""Distributed-backend argument builders for Hugging Face training runs.
+
+Given a backend selection, this module returns backend-specific keyword
+arguments compatible with `TrainingArguments`, including DeepSpeed and FSDP
+settings. It centralizes validation and backend switching logic to keep
+training entrypoints concise.
+"""
+
 from __future__ import annotations
 
 from typing import Any

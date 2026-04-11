@@ -1,3 +1,11 @@
+"""Data ingestion adapters for JSONL files, raw text corpora, and HTTP APIs.
+
+Functions in this module normalize different source formats into lists of
+dictionary records so later pipeline stages can operate on a consistent shape.
+It supports line-delimited JSON datasets, paragraph-style text segmentation,
+and JSON payload retrieval with basic response validation.
+"""
+
 from __future__ import annotations
 
 import json

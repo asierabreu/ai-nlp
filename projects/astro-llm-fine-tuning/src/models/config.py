@@ -1,3 +1,10 @@
+"""Dataclass configuration schema for GPT-style model construction.
+
+`GPTModelConfig` captures core architecture and vocabulary hyperparameters,
+including optional RoPE scaling controls. It provides a typed contract between
+YAML configuration loading and model-building utilities.
+"""
+
 from __future__ import annotations
 
 from dataclasses import dataclass

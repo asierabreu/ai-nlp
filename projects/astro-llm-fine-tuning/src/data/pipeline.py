@@ -1,3 +1,11 @@
+"""End-to-end dataset preparation pipeline for training and evaluation.
+
+The pipeline orchestrates source ingestion, text normalization, tokenization,
+and dataset versioning in a single callable flow. It writes both a hashed
+manifest and a JSONL artifact so downstream training jobs can reproduce exactly
+which processed records were used.
+"""
+
 from __future__ import annotations
 
 import json

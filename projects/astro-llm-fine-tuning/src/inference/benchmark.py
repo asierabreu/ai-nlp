@@ -1,3 +1,10 @@
+"""Latency benchmarking helpers for inference backends.
+
+This module runs repeated generation calls and summarizes timing distribution
+with mean and P95 latency in milliseconds. It is intended for quick comparative
+checks across model/back-end combinations rather than full load-testing.
+"""
+
 from __future__ import annotations
 
 import statistics

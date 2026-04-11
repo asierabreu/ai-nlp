@@ -1,3 +1,11 @@
+"""Export utilities for human-in-the-loop evaluation templates.
+
+This module converts prediction/reference rows into a structured schema that
+includes rubric fields for fluency, factuality, and domain accuracy scoring.
+The resulting JSON artifact is intended for manual review workflows and audit
+trails.
+"""
+
 from __future__ import annotations
 
 import json

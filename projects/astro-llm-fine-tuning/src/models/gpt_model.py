@@ -1,3 +1,11 @@
+"""Model factory helpers for initialization and inference loading.
+
+Functions in this module either construct a causal language model from a
+customized transformer configuration or load pretrained checkpoints with
+device-aware inference defaults. This separation supports experimentation during
+training and straightforward deployment-time loading.
+"""
+
 from __future__ import annotations
 
 from typing import Any

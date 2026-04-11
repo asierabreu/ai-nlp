@@ -1,3 +1,11 @@
+"""Text cleaning helpers used before tokenization and model training.
+
+This module implements deterministic normalization that removes null bytes,
+trims boundary whitespace, lowercases content, and collapses repeated
+whitespace. Record-level cleaning keeps non-text fields intact while updating
+only the configured text field when it is present and string-typed.
+"""
+
 from __future__ import annotations
 
 import re

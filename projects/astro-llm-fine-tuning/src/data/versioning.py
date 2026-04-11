@@ -1,3 +1,11 @@
+"""Dataset versioning primitives based on stable content hashing.
+
+The module computes SHA256 digests over processed records and emits a manifest
+containing lineage metadata such as source, timestamp, and record count. These
+artifacts enable reproducibility checks and traceability across data pipeline
+runs.
+"""
+
 from __future__ import annotations
 
 import hashlib

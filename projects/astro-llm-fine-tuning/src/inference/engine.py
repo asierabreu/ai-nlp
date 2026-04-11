@@ -1,3 +1,11 @@
+"""Inference runtime abstraction over multiple text-generation backends.
+
+`InferenceEngine` lazily initializes either vLLM, Hugging Face pipelines, or a
+mock backend and exposes a unified generation API across them. It also includes
+a simple streaming adapter that yields token-like chunks for endpoint handlers
+that need incremental responses.
+"""
+
 from __future__ import annotations
 
 from typing import Any

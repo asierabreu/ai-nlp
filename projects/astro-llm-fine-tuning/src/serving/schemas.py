@@ -1,3 +1,10 @@
+"""Pydantic request and response schemas for text-generation endpoints.
+
+The schema definitions enforce input constraints such as token limits and
+temperature bounds while documenting the public API contract. Response models
+standardize output fields returned by synchronous generation requests.
+"""
+
 from __future__ import annotations
 
 from pydantic import BaseModel, Field

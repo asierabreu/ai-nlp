@@ -1,3 +1,10 @@
+"""Question-answering benchmark metrics based on exact-match scoring.
+
+It provides case-insensitive exact-match computation for single predictions and
+dataset-level aggregation across benchmark rows. The helpers are intentionally
+simple and deterministic for baseline QA evaluation.
+"""
+
 from __future__ import annotations
 
 from typing import Any

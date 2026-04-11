@@ -1,3 +1,11 @@
+"""FastAPI application exposing health, metrics, and generation routes.
+
+This module wires structured logging, Prometheus instrumentation, and inference
+engine lifecycle management into a deployable HTTP service. It supports both
+single-response generation and token-streaming responses while recording request
+latency and surfacing failures as API-friendly error payloads.
+"""
+
 from __future__ import annotations
 
 import logging

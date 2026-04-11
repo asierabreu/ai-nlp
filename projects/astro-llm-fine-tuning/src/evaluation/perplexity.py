@@ -1,3 +1,10 @@
+"""Perplexity computation helpers for language-model evaluation.
+
+The module implements a compact utility that transforms a sequence of loss
+values into perplexity using the exponential of mean loss, with input validation
+to prevent silent misuse on empty samples.
+"""
+
 from __future__ import annotations
 
 import math

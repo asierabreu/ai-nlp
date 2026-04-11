@@ -1,3 +1,11 @@
+"""Shared causal-LM training pipeline used by pretraining and SFT workflows.
+
+This module loads YAML configurations, resolves model settings, prepares JSON
+datasets, tokenizes examples, and executes Hugging Face `Trainer` runs. It also
+configures distributed backend options and writes run metadata so experiments are
+traceable after checkpoints are produced.
+"""
+
 from __future__ import annotations
 
 import json
